@@ -1,11 +1,11 @@
  #!/bin/bash
 background_changer() {
-    for dat in $HOME/Bilder/Wallpapers/*.png # your pics path
+    for dat in #PICPATH#
     do
         gsettings set org.gnome.desktop.background picture-uri "file:///$dat"
         gsettings set org.gnome.desktop.screensaver picture-uri "file:///$dat"
         echo $dat
-        sleep 30 # 300 seconds as standard
+        sleep #INTERVAL# 
     done
 
 }
