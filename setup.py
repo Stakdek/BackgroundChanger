@@ -42,10 +42,8 @@ spinner.loading_bar(progress=40, state='Setup templates…')
 setup_templates.run(interval, picpath)
 
 spinner.loading_bar(progress=50, state='Moving new files…')
-subprocess.check_call(['sudo', 'cp', 'install/backgroundchanger.desktop',
-                       home + '/.config/autostart/'])
-spinner.loading_bar(progress=60)
 subprocess.check_call(['sudo', 'mv', 'backgroundchanger', '/usr/bin/'])
+spinner.loading_bar(progress=60)
 
 spinner.loading_bar(progress=70, state='Make executable…')
 subprocess.check_call(['sudo', 'chmod', '-x', '/usr/bin/backgroundchanger'])
