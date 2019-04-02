@@ -1,11 +1,12 @@
  #!/bin/bash
 background_changer() {
-    for dat in #PICPATH#
+    pics=`find #PICPATH# | grep -P ".*[.]png|.*[.]jpg|.*[.]jpeg|.*[.]PNG|.*[.]JPG|.*[.]JPEG"`
+    for pic in $pics
     do
-        gsettings set org.gnome.desktop.background picture-uri "file:///$dat"
-        gsettings set org.gnome.desktop.screensaver picture-uri "file:///$dat"
-        echo $dat
-        sleep #INTERVAL# 
+        gsettings set org.gnome.desktop.background picture-uri "file:///$pic"
+        gsettings set org.gnome.desktop.screensaver picture-uri "file:///$pic"
+        echo $pic
+        sleep #INTERVAL#
     done
 
 }
