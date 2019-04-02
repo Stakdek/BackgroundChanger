@@ -1,4 +1,5 @@
- #!/bin/bash
+#!/bin/bash
+IFS=$'\n'
 background_changer() {
     pics=`find #PICPATH# | grep -P ".*[.]png|.*[.]jpg|.*[.]jpeg|.*[.]PNG|.*[.]JPG|.*[.]JPEG"`
     for pic in $pics
