@@ -51,3 +51,7 @@ subprocess.check_call(['sudo', 'chmod', '777', '-R', pwd])
 spinner.loading_bar(progress=100)
 print('')
 print('Installed')
+print('Do you want to restart now? (to make changes work) Y/n:')
+result = raw_input().strip()
+if result != 'n' and result !=  'no':
+    subprocess.check_call(['sudo', 'reboot', 'now'])
