@@ -4,7 +4,7 @@ After= multi-user.target
 [Service]
 Type=simple
 Restart=always
-TimeoutStartSec=0
+TimeoutStartSec=10
 ExecStart=/usr/bin/backgroundchanger
 [Install]
 WantedBy=default.target
