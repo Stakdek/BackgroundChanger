@@ -9,11 +9,11 @@ from os.path import expanduser
 if len(sys.argv) > 2:
     picpath = str(sys.argv[2]).strip()
     if picpath.endswith('/'):
-        picpath = picpath + '*.png'
+        picpath = picpath + '*'
     else:
-        picpath = picpath + '/*.png'
+        picpath = picpath + '/*'
 else:
-    picpath = '$HOME/*.png'
+    picpath = '$HOME/*'
 
 if len(sys.argv) > 1:
     interval = str(sys.argv[1]).strip()
