@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=backgroundchanger
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[de_DE]=Backgroundchanger
+Name=Backgroundchanger
+Comment[de_DE]=
+Comment=
