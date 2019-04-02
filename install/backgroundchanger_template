@@ -6,7 +6,7 @@ background_changer() {
     do
         gsettings set org.gnome.desktop.background picture-uri "file:///$pic"
         gsettings set org.gnome.desktop.screensaver picture-uri "file:///$pic"
-        echo $pic
+        # echo $pic
         sleep #INTERVAL#
     done
 

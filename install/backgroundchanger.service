@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto start for Backgroundchanger
+After= multi-user.target
+[Service]
+Type=simple
+Restart=always
+TimeoutStartSec=10
+ExecStart=/usr/bin/backgroundchanger
+[Install]
+WantedBy=default.target
+Alias=changer.service
