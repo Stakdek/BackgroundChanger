@@ -8,7 +8,7 @@ from PythonSpinner import spinner
 from install import setup_templates
 
 spinner.loading_bar(progress=4, state='Get variables…')
-pwd = os.environ['PWD']
+pwd = os.getcwd()
 home = os.environ['HOME']
 spinner.loading_bar(progress=6)
 if len(sys.argv) > 2:
